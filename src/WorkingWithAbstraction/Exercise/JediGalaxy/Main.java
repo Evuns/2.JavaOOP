@@ -11,7 +11,7 @@ public class Main {
         int[][] galaxy = new StarsMatrix(dimensions[0], dimensions[1]).getStarMatrix();
 
         String command = scanner.nextLine();
-        int sum = 0;
+        long sum = 0;
         while (!command.equals("Let the Force be with you")) {
             int[] playerStartPosition = convertToArray(command);
             int[] evilStartPosition = convertToArray(scanner.nextLine());
