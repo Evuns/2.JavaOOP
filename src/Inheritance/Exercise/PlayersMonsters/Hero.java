@@ -10,10 +10,12 @@ public class Hero {
     }
 
     public String getUsername(){
+
         return this.username;
     }
 
     public int getLevel(){
+
         return this.level;
     }
     @Override
