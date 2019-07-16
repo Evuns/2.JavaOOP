@@ -45,7 +45,7 @@ public class Chicken {
 
     @Override
     public String toString() {
-       return String.format("encapsulation.exercise.animalFarm.Chicken %s (age %d) can produce %.2f eggs per day.",
+       return String.format("Chicken %s (age %d) can produce %.2f eggs per day.",
                this.name, this.age, productPerDay());
     }
 }

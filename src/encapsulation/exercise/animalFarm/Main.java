@@ -9,8 +9,11 @@ public class Main {
         String name = scanner.nextLine();
         int age = scanner.nextInt();
 
-        Chicken chicken = new Chicken(name,age);
-
-        System.out.println(chicken.toString());
+        try {
+            Chicken chicken = new Chicken(name, age);
+            System.out.println(chicken.toString());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
