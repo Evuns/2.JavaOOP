@@ -13,28 +13,25 @@ public class Box {
         setHeight(height);
     }
 
+    private void validate(double value, String dimension) {
+        if (value <= 0) {
+            throw new IllegalArgumentException(dimension + " cannot be zero or negative.");
+        }
+    }
+
     private void setLength(double length) {
-        if (length > 0) {
-            this.length = length;
-        } else {
-            throw new IllegalArgumentException("Length cannot be zero or negative.");
-        }
+        validate(length, "Length");
+        this.length = length;
     }
 
-    public void setWidth(double width) {
-        if (width > 0) {
-            this.width = width;
-        } else {
-            throw new IllegalArgumentException("Width cannot be zero or negative.");
-        }
+    private void setWidth(double width) {
+        validate(width, "Width");
+        this.width = width;
     }
 
-    public void setHeight(double height) {
-        if (height > 0) {
-            this.height = height;
-        } else {
-            throw new IllegalArgumentException("Height cannot be zero or negative.");
-        }
+    private void setHeight(double height) {
+        validate(height, "Height");
+        this.height = height;
     }
 
     public double calculateSurfaceArea() {
