@@ -1,4 +1,4 @@
-package interfacesAbstraction.carShopExtended;
+package interfacesAbstraction.lab.carShopExtended;
 
 public class Audi extends CarImpl implements Rentable {
 
