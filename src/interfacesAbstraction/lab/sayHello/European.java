@@ -1,12 +1,13 @@
-package interfacesAbstraction.sayHello;
+package interfacesAbstraction.lab.sayHello;
 
-public class Bulgarian implements Person {
+public class European implements Person {
 
     private String name;
 
-    public Bulgarian(String name) {
+    public European(String name) {
         this.name = name;
     }
+
 
     @Override
     public String getName() {
@@ -15,6 +16,6 @@ public class Bulgarian implements Person {
 
     @Override
     public String sayHello() {
-        return "Здравей";
+        return "Hello";
     }
 }

@@ -1,4 +1,4 @@
-package interfacesAbstraction.sayHello;
+package interfacesAbstraction.lab.sayHello;
 
 import java.util.ArrayList;
 import java.util.List;
