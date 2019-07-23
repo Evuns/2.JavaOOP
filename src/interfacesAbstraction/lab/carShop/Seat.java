@@ -1,4 +1,4 @@
-package interfacesAbstraction.carShop;
+package interfacesAbstraction.lab.carShop;
 
 public class Seat implements Car {
     private String model;
