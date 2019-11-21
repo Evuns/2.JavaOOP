@@ -1,11 +1,11 @@
 package reflection.excercise.barracksWars;
 
-import barracksWars.interfaces.Repository;
-import barracksWars.interfaces.Runnable;
-import barracksWars.interfaces.UnitFactory;
-import barracksWars.core.Engine;
-import barracksWars.core.factories.UnitFactoryImpl;
-import barracksWars.data.UnitRepository;
+import reflection.excercise.barracksWars.interfaces.Repository;
+import reflection.excercise.barracksWars.interfaces.Runnable;
+import reflection.excercise.barracksWars.interfaces.UnitFactory;
+import reflection.excercise.barracksWars.core.Engine;
+import reflection.excercise.barracksWars.core.factories.UnitFactoryImpl;
+import reflection.excercise.barracksWars.data.UnitRepository;
 
 public class Main {
 

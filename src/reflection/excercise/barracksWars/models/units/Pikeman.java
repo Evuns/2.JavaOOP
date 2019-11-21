@@ -1,7 +1,5 @@
 package reflection.excercise.barracksWars.models.units;
 
-import barracksWars.models.units.AbstractUnit;
-
 public class Pikeman extends AbstractUnit {
 
 	private static final int PIKEMAN_HEALTH = 30;

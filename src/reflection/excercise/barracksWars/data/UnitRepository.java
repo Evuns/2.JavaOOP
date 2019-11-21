@@ -1,8 +1,7 @@
 package reflection.excercise.barracksWars.data;
 
-import barracksWars.interfaces.Repository;
-import barracksWars.interfaces.Unit;
-import jdk.jshell.spi.ExecutionControl;
+import reflection.excercise.barracksWars.interfaces.Repository;
+import reflection.excercise.barracksWars.interfaces.Unit;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -38,8 +37,13 @@ public class UnitRepository implements Repository {
 		return statBuilder.toString();
 	}
 
-	public void removeUnit(String unitType) throws ExecutionControl.NotImplementedException {
-		// TODO: implement for problem 4
-		throw new ExecutionControl.NotImplementedException("message");
+	public void removeUnit(String unitType){
+		boolean containsValue = this.amountOfUnits.containsKey(unitType);
+		if(containsValue){
+			this.amountOfUnits.put(unitType, this.amountOfUnits.get(unitType) - 1);
+			System.out.print(unitType + " retired!");
+		} else{
+			System.out.print("No such units in repository.");
+		}
 	}
 }

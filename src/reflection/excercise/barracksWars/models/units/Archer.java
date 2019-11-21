@@ -1,7 +1,5 @@
 package reflection.excercise.barracksWars.models.units;
 
-import barracksWars.models.units.AbstractUnit;
-
 public class Archer extends AbstractUnit {
     private static final int ARCHER_HEALTH = 25;
     private static final int ARCHER_DAMAGE = 7;
