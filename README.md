@@ -12,7 +12,7 @@ Course topics:
 
 <a href="https://github.com/Evuns/JavaOOP/tree/master/src/polymorphism" target="_blank">PolymorphismM</a>
 
-<a href="" target="_blank">SOLID</a>
+SOLID
 
 <a href="https://github.com/Evuns/JavaOOP/tree/master/src/reflection" target="_blank">Reflection and Annotations</a>
 
