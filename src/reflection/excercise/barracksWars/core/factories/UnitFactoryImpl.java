@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 public class UnitFactoryImpl implements UnitFactory {
 
     private static final String UNITS_PACKAGE_NAME =
-            "reflection.excercise.barracksWars.models.units.";
+            "reflection.excercise.barracksWars.models.otherUnits.";
 
     @Override
     public Unit createUnit(String unitType) {

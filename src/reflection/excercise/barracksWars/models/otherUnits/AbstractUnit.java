@@ -1,4 +1,4 @@
-package reflection.excercise.barracksWars.models.units;
+package reflection.excercise.barracksWars.models.otherUnits;
 
 import reflection.excercise.barracksWars.interfaces.Unit;
 

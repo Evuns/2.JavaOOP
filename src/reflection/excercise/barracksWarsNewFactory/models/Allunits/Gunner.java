@@ -1,4 +1,4 @@
-package reflection.excercise.barracksWarsNewFactory.models.units;
+package reflection.excercise.barracksWarsNewFactory.models.Allunits;
 
 public class Gunner extends AbstractUnit {
     private static final int GUNNER_HEALTH = 20;

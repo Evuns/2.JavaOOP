@@ -1,4 +1,4 @@
-package reflection.excercise.barracksWarsNewFactory.models.units;
+package reflection.excercise.barracksWars.models.otherUnits;
 
 public class Pikeman extends AbstractUnit {
 

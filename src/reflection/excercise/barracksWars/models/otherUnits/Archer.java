@@ -1,4 +1,4 @@
-package reflection.excercise.barracksWarsNewFactory.models.units;
+package reflection.excercise.barracksWars.models.otherUnits;
 
 public class Archer extends AbstractUnit {
     private static final int ARCHER_HEALTH = 25;
