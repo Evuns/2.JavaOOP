@@ -1,4 +1,4 @@
-package reflection.excercise.barracksWars.models.units;
+package reflection.excercise.barracksWarsDependencyInjection.units;
 
 public class Swordsman extends AbstractUnit {
     private static final int SWORDSMAN_HEALTH = 40;
