@@ -20,6 +20,8 @@ public abstract class Hardware extends ComponentType {
         this.softwareComponents = softwareComponents;
     }
 
+    
+
     protected enum Type{
         POWER,
         HEAVY

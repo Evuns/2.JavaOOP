@@ -13,9 +13,9 @@ public abstract class ComponentType {
         this.someMemory = someMemory;
     }
 
-//    public Enum getName() {
-//        return name;
-//    }
+    public String getName() {
+        return name;
+    }
 //
 //    public Enum getType() {
 //        return type;
