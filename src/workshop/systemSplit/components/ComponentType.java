@@ -16,10 +16,10 @@ public abstract class ComponentType {
     public String getName() {
         return name;
     }
-//
-//    public Enum getType() {
-//        return type;
-//    }
+
+    public String getType() {
+        return type.name();
+    }
 
     public int getSomeCapacity(){
         return this.someCapacity;
@@ -29,5 +29,12 @@ public abstract class ComponentType {
         return this.someMemory;
     }
 
+    protected void setSomeCapacity(int someCapacity) {
+        this.someCapacity = someCapacity;
+    }
+
+    protected void setSomeMemory(int someMemory) {
+        this.someMemory = someMemory;
+    }
 }
 

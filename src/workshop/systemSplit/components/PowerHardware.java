@@ -2,20 +2,28 @@ package workshop.systemSplit.components;
 
 
 public class PowerHardware extends Hardware {
-    public static final double REDUCE_CONSTANT = 0.75;
 
     public PowerHardware(String name, int maximumCapacity, int maximumMemory) {
-        super(name,Type.POWER, maximumCapacity, maximumMemory);
+        super(name, Type.POWER, maximumCapacity, maximumMemory);
+
     }
 
     @Override
     public int getSomeCapacity() {
-        return (int) (super.getSomeCapacity() - REDUCE_CONSTANT * super.getSomeCapacity());
+        int baseCapacity = super.getSomeCapacity();
+        baseCapacity -= ((baseCapacity * 3) / 4);
+        return baseCapacity - super.getUsedCapacity();
     }
 
     @Override
     public int getSomeMemory() {
-        return (int) (super.getSomeMemory() + REDUCE_CONSTANT * super.getSomeMemory());
+        int baseMemory = super.getSomeMemory();
+        baseMemory += ((baseMemory * 3) / 4);
+        return baseMemory - super.getUsedMemory();
+    }
 
+    @Override
+    public String toString(){
+        return super.toString();
     }
 }

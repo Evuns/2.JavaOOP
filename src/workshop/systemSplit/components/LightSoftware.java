@@ -10,7 +10,7 @@ public class LightSoftware extends Software {
 
     @Override
     public int getSomeCapacity() {
-        return super.getSomeCapacity() * LIGHT_CONSTANT;
+        return super.getSomeCapacity() * 3 / 2;
     }
 
     @Override

@@ -2,17 +2,28 @@ package workshop.systemSplit.components;
 
 public class HeavyHardware extends Hardware {
 
-    protected HeavyHardware(String name, int maximumCapacity, int maximumMemory) {
-        super(name,Type.HEAVY, maximumCapacity, maximumMemory);
+
+    public HeavyHardware(String name, int maximumCapacity, int maximumMemory) {
+        super(name, Type.HEAVY, maximumCapacity, maximumMemory);
+
     }
 
     @Override
     public int getSomeCapacity() {
-        return super.getSomeCapacity() * 2;
+        int baseCapacity = super.getSomeCapacity();
+        baseCapacity *= 2;
+        return baseCapacity - super.getUsedCapacity();
     }
 
     @Override
     public int getSomeMemory() {
-        return (int)(super.getSomeMemory() * 0.75);
+        int baseMemory = super.getSomeMemory();
+        baseMemory -= (baseMemory / 4);
+        return baseMemory - super.getUsedMemory();
+    }
+
+    @Override
+    public String toString(){
+        return super.toString();
     }
 }
