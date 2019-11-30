@@ -5,6 +5,7 @@ import workshop.systemSplit.components.Hardware;
 import workshop.systemSplit.components.Software;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.ToIntFunction;
 
@@ -13,7 +14,7 @@ public class SystemSplit {
     private Map<String, Hardware> hardwareComponents;
 
     public SystemSplit() {
-        this.hardwareComponents = new HashMap<>();
+        this.hardwareComponents = new LinkedHashMap<>();
     }
 
     public void addHardwareComponent(Hardware hardware) {
@@ -27,40 +28,55 @@ public class SystemSplit {
         }
     }
 
-    public void releaseSoftware(String hardwareName, String softwareName){
+    public void releaseSoftware(String hardwareName, String softwareName) {
         if (this.hardwareComponents.containsKey(hardwareName)) {
             Hardware hardware = this.hardwareComponents.get(hardwareName);
             hardware.removeSoftware(softwareName);
         }
     }
 
-    public int getHardwareComponentsSize() {
-        return this.hardwareComponents.size();
-    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        this.hardwareComponents.values().stream().sorted((h1, h2) -> {
+            if (h1.getType().equalsIgnoreCase("Power")) {
+                return -1;
+            }
+            return 1;
+        }).forEach(h -> {
+            sb.append(h.toString());
+            sb.append(System.lineSeparator());
+        });
+            return sb.toString().trim();
+        }
 
-    public int getSoftwareComponentCount() {
-        return this.hardwareComponents.values().stream()
-                .mapToInt(Hardware::getSoftwareCount).sum();
-    }
+        public int getHardwareComponentsSize () {
+            return this.hardwareComponents.size();
+        }
 
-    public int getTotalOperationalMemoryInUse(){
-        return this.getValue(Hardware::getUsedMemory);
-    }
+        public int getSoftwareComponentCount () {
+            return this.hardwareComponents.values().stream()
+                    .mapToInt(Hardware::getSoftwareCount).sum();
+        }
 
-    public int getTotalCapacityTaken(){
-        return this.getValue(Hardware::getUsedCapacity);
-    }
+        public int getTotalOperationalMemoryInUse () {
+            return this.getValue(Hardware::getUsedMemory);
+        }
 
-    public int getMaximumMemory() {
-        return this.getValue(ComponentType::getSomeMemory);
-    }
+        public int getTotalCapacityTaken () {
+            return this.getValue(Hardware::getUsedCapacity);
+        }
 
-    public int getMaximumCapacity() {
-        return this.getValue(ComponentType::getSomeCapacity);
-    }
+        public int getMaximumMemory () {
+            return this.getValue(ComponentType::getSomeMemory);
+        }
 
-    private int getValue (ToIntFunction<Hardware> func){
-      return   this.hardwareComponents.values()
-                .stream().mapToInt(func).sum();
+        public int getMaximumCapacity () {
+            return this.getValue(ComponentType::getSomeCapacity);
+        }
+
+        private int getValue (ToIntFunction < Hardware > func) {
+            return this.hardwareComponents.values()
+                    .stream().mapToInt(func).sum();
+        }
     }
-}
